@@ -1,0 +1,14 @@
+{{> header }}
+
+<div id="top" class="section section-blue">
+    <div class="container">
+        <h1>TSFramework</h1>
+        <p>An Elegant MVC Framework for TypeScript</p>
+    </div>
+</div>
+
+<div id="what" class="section section-grey">
+
+</div>
+
+{{> footer }}
