@@ -1,0 +1,23 @@
+{{> header }}
+
+<div id="top" class="section section-blue">
+    <div class="container">
+        <h1>Documentation</h1>
+    </div>
+</div>
+
+<div class="section section-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 documentation-menu">
+                {{> docmenu }}
+            </div>
+            <div class="col-md-9 documentation-content">
+                {{{ contents }}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer }}
+

@@ -4,4 +4,4 @@ template: doc.hbt
 class: documentation
 ---
 
-## Getting started
+## Installation

@@ -1,0 +1,20 @@
+<h2>Getting started</h2>
+<ul>
+    <li><a href="/doc/installation.html">Installation</a></li>
+    <li><a href="/doc/architecture.html">Architecture</a></li>
+    <li><a href="/doc/startup-sequence.html">Startup Sequence</a></li>
+    <li><a href="/doc/request-lifecycle.html">Request Lifecycle</a></li>
+</ul>
+<h2>Services</h2>
+<ul>
+    <li><a href="/doc/configuration.html">Configuration</a></li>
+    <li><a href="/doc/controllers.html">Controllers</a></li>
+    <li><a href="/doc/router.html">Router</a></li>
+    <li><a href="/doc/views.html">Views</a></li>
+    <li><a href="/doc/core.html">Core (Injection Container)</a></li>
+</ul>
+<h2>Advanced</h2>
+<ul>
+    <li><a href="/doc/services-providers.html">Service providers</a></li>
+    <li><a href="/doc/extending.html">Extending the framework</a></li>
+</ul>

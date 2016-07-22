@@ -4,8 +4,8 @@ var Metalsmith = require('metalsmith'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
     less = require('metalsmith-less'),
-    dev = require("metalsmith-dev");
-
+    dev = require("metalsmith-dev"),
+    metallic = require('metalsmith-metallic');
 
 var app = Metalsmith(__dirname)
     .use(less({
@@ -18,6 +18,7 @@ var app = Metalsmith(__dirname)
         }
     }))
     .use(permalinks())
+    .use(metallic())
     .use(markdown({
         "smartypants": true,
         "gfm": true,
@@ -27,7 +28,8 @@ var app = Metalsmith(__dirname)
         engine: 'handlebars',
         partials: {
             header: 'partials/header',
-            footer: 'partials/footer'
+            footer: 'partials/footer',
+            docmenu: 'partials/docmenu'
         }
     }))
     .destination('./build');
