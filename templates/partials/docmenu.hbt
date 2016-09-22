@@ -1,6 +1,6 @@
 <h2>Getting started</h2>
 <ul>
-    <li><a href="/doc/installation.html">Installation</a></li>
+    <li><a href="/doc/getting-started.html">Getting Started</a></li>
     <li><a href="/doc/architecture.html">Architecture</a></li>
     <li><a href="/doc/startup-sequence.html">Startup Sequence</a></li>
     <li><a href="/doc/request-lifecycle.html">Request Lifecycle</a></li>

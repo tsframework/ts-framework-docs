@@ -40,16 +40,18 @@ Services providers are an advanced topic and are better explained [here](/doc/se
 
 ## Booting sequence
 
-When booting, each service provider will be called in turn to give them a chance to start their services.
+When booting, the framework goes into a number of steps to give each components a chance to start up correctly.
+
+Each component must have a service provider that will be called in turn to give them a chance to start the component.
+The list of service providers and their order is defined as part of the entry point of the application.
+So making it easy to alter started components and their order.
 
 In the above example, the application will start the base framework components first (`TSFWServiceProvider`).
-
-Then comes the Configuration (`ConfigurationServiceProvider`) that will load default configuration and
-the Controller system (`ControllerServiceProvider`) which will load controller classes and register routes.
+Then comes the Configuration (`ConfigurationServiceProvider`) component and the Controller system (`ControllerServiceProvider`).
 
 After that comes the `HttpServiceProvider` will start the HttpServer that will receive requests and pass them to the controllers.
-
 Finally the application start the `ViewServiceProvider` which will handle views returned by Controllers.
 
-Once these steps are done, the application must be started and start answering requests.
-The framework has now finished his job and give the full power to your application!
+Usually, you'll want to add additional providers to boot up your application right after the framework.
+
+The framework has now finished his job and is ready to give the full power to your application to start answering requests!
