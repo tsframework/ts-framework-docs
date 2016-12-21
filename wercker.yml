@@ -1,0 +1,35 @@
+box: node
+build:
+  steps:
+    - npm-install
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+    - script:
+      name: Build website
+      code: |
+        export NODE_ENV=production && node metalsmith.js
+
+deploy:
+  steps:
+    - add-to-known_hosts:
+      hostname: github.com
+    - add-ssh-key:
+      keyname: GITHUB
+    - script:
+      name: Create git repository
+      code: |
+        git clone git@github.com:tsframework/tsframework.github.io.git
+    - script:
+      name: Move new files
+      code: |
+        rm -rf tsframework.github.io/*
+        mv build/* tsframework.github.io/
+    - script:
+      name: Commit and push
+      code: |
+        git add -vA
+        git commit -vm "Automatic deploy commit"
+        git push origin master

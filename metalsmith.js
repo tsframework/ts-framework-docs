@@ -40,7 +40,11 @@ app.build(function (err) {
         else {
             console.log('Site build complete!');
         }
-    });
+});
 
-dev.watch(app, ["templates/**", "src/**"]);
-dev.serve(app);
+console.log(process.env.NODE_ENV);
+
+if (process.env.NODE_ENV != "production") {
+	dev.watch(app, ["templates/**", "src/**"]);
+	dev.serve(app);
+}

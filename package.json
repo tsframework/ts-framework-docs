@@ -29,5 +29,8 @@
     "metalsmith-start": "^2.0.0",
     "metalsmith-templates": "^0.7.0",
     "metalsmith-watch": "^1.0.3"
+  },
+  "dependencies": {
+    "metalsmith-less": "^2.0.0"
   }
 }
