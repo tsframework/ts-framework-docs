@@ -31,5 +31,7 @@ deploy:
       name: Commit and push
       code: |
         git add -vA
+        git config --global user.email "atrakeur+ci@gmail.com"
+        git config --global user.name "Atrakeur CI"
         git commit -vm "Automatic deploy commit"
         git push origin master
