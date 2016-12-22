@@ -29,6 +29,7 @@ deploy:
         mv build/* tsframework.github.io/
     - script:
       name: Commit and push
+      cwd: tsframework.github.io
       code: |
         git add -vA
         git config --global user.email "atrakeur+ci@gmail.com"
