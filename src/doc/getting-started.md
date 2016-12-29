@@ -28,7 +28,9 @@ git clone https://github.com/tsframework/ts-framework.git
 
     ```
 cd ts-framework
+npm install -g typings
 npm install
+typings install
 npm run-script build
     ```
 
